@@ -1,0 +1,75 @@
+@media only screen and (max-width: 768px) {
+    .details {flex-direction: column;}
+    .details > .details1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .details > .details2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .details > .details3 {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .details > .details4 {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:1024px) {
+    header > .navigation > nav  {display: none;}
+    /* header > .navigation > .right_nav > ul > li:first-child {display: none;} */
+    header > .navigation > .right_nav_img > ul > li > a > img {
+        display: block;
+    }
+    header .navigation .right_nav {display: none;}
+    header .navigation .mobile_nav {display: block;}
+    .main_news {
+        display: block;
+        margin: 41px auto 40px;
+        padding-top: 55vw;
+        position: relative;
+    }
+    .main_news .left_box {
+        width: 100%; 
+        padding: 20px; height: 300px;
+    }
+    .main_news .left_box > h2 {padding: 30px 0 ;}
+    .main_news .left_box > p {width: 100%;}
+    .main_news  > p > img {
+        width: 100%; 
+        position: absolute;
+        left: 0; top: 0;
+        height: 55vw;
+        object-fit: cover;
+        object-position: top center;
+    }
+    .news {padding: 0;}
+    .news .sub_news {
+        display: flex;
+        margin: 80px 1pc 0;
+        flex-direction: column;
+    } 
+    .news .sub_news > ul{
+        margin-bottom: 2pc;
+        width: 100%;
+    }
+    .event {padding: 0px;}
+    .event .content_inner .left_content ul:nth-child(2) {display: none;}
+    .event .content_inner .left_content ul:last-child {display: none;}
+    .mobile_footer {display: block;}
+    .footer_content .footer_right {display: none;}
+    .footer_content {padding: 10px 25px;}
+    .btm {display: none;}
+    .footer_menu .top p {margin: 0;}
+    .vehicle_type > div {
+        width: calc(50% - 20px);
+
+    }
+}   
+@media screen and (max-width:1366px) {
+    .swiper_tag .swiper-button-prev {display: none;}
+    .swiper_tag .swiper-button-next {display: none;}
+}
+
