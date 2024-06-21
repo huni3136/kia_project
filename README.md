@@ -1,2 +1,2 @@
 # kia_project
-http://huni3136.dothome.co.kr/kia/index.html
+ftp://huni3136@huni3136.dothome.co.kr/html/kia/index.html
