@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EV & PBV | 차량 | 기아 공식 사이트</title>
-
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -14,12 +13,15 @@
     <!-- 스크롤트리거 플러그인 연결 주소(필수) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <link rel="shortcut icon" href="./images/logo_w.svg" />
+    <link rel="shortcut icon" href="./images/kia_logo.svg.svg" />
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/vehicle.css">
     <link rel="stylesheet" href="./style/responsive.css">
     <link rel="stylesheet" href="./style/animation.css">
-    <script src="./script/index.js" defer></script>
+    <script src="./script/vehicle.js" defer></script>
+    <style>
+        .m_nav_hide {display: none;}
+    </style>
 </head>
 <body>
     <header>
@@ -27,7 +29,7 @@
             <nav>
                 <div class="sub_bg"></div>
                 <ul class="gnb">
-                    <li><a href="#" class="car">차량</a></li>
+                    <li class="car_vehicel"><a href="./vehicle.html" class="car">차량</a></li>
                     <li><a href="#" class="buy">구매</a>
                         <div class="sub_buy">
                             <div class="sub_nav">
@@ -59,7 +61,7 @@
                     <li><a href="#" class="experience">체험</a>
                         <div class="sub_experience">
                             <div class="sub_nav">
-                                <ul>
+                                <ul class="sub">
                                     <li><a href="#">시승 신청</a></li>
                                     <li><a href="#">판매 네트워크</a>
                                         <ul class="sub_menu">
@@ -93,8 +95,8 @@
                     <li><a href="#" class= "event1">이벤트</a>
                         <div class="sub_event1">
                             <div class="sub_nav">
-                                <ul>
-                                    <li><a href="#">진행 중인 이벤트</a></li>
+                                <ul class="sub">
+                                    <li><a href="./event.html">진행 중인 이벤트</a></li>
                                     <li><a href="#">종료된 이벤트</a></li>
                                     <li><a href="#">당첨자 발표</a></li>
                                 </ul>
@@ -112,7 +114,7 @@
                     <li><a href="#" class="support">고객 지원</a>
                         <div class="sub_support">
                             <div class="sub_nav">
-                                <ul>
+                                <ul class="sub">
                                     <li><a href="#">유지 & 관리</a>
                                         <ul class="sub_menu">
                                             <li><a href="#">기아멤버스</a></li>
@@ -153,7 +155,7 @@
                     <li><a href="#" class="discover_kia">Discover Kia</a>
                         <div class="sub_discover_kia">
                             <div class="sub_nav">
-                                <ul>
+                                <ul class="sub">
                                     <li><a href="#">New Kia</a>
                                         <ul class="sub_menu">
                                             <li><a href="#">Our Symbol</a></li>
@@ -187,12 +189,14 @@
                     <li><a href="#">로그인</a></li>
                 </ul>
             </div>
-            <div class="mobile_nav">
-                <ul>
-                    <li><a href="#"><img src="./images/public.svg" alt=""></a></li>
-                    <li><a href="#"><img src="./images/search.svg" alt=""></a></li>
-                    <li><a href="#"><img src="./images/drag_handle.svg" alt=""></a></li>
-                </ul>
+            <div class="lnb">
+                <div class="mobile_nav">
+                    <a href="#" class="my_menu"><img src="./images/public.svg" alt=""></a>
+                    <a href="#" class="search_img"><img src="./images/search.svg" alt=""></a>
+                    <div class="m_nav">
+                        <a href="#" class="all_nav"><img src="./images/drag_handle.svg" alt="모바일 메뉴 열기"></a>
+                    </div>
+                </div>
             </div>
         </div> 
     </header>
@@ -208,12 +212,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="conatiner_car">
+            <div class="conatiner_car ev">
                 <div class="vehicle_type">
                     <div class="vehicle1">
-                        <a href="#" class="ray">
-                            <span class="photo"><img src="./sub_img/ray-ev_s_eu3.png" alt=""></span>
-                            <span class="photo1"><img src="./sub_img/ray-ev_q_eu3.png" alt=""></span>
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/ray-ev_s_eu3.png" alt=""></p>
+                            <p class="photo1"><img src="./sub_img/ray-ev_q_eu3.png" alt=""></p>
                             <h2>레이 EV</h2>
                             <p class="price">2,735 만원 ~</p>
                         </a>
@@ -223,9 +227,9 @@
                         </div>
                     </div>
                     <div class="vehicle2">
-                        <a href="#" class="niro">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/niro-ev_s_swp.png" alt="" ></p>
-                            <p class="photo1"><img src="./sub_img/niro-ev_Q_swp.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/niro-ev_q_swp.png" alt="" ></p>
                             <h2>니로 EV</h2>
                             <p class="price">5,114 만원 ~</p>
                         </a>
@@ -235,7 +239,7 @@
                         </div>
                     </div>
                     <div class="vehicle3">
-                        <a href="#" class="niro_plus">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/niro-plus_s_m7g.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/niro-plus_q_m7g.png" alt="" ></p>
                             <h2>니로 플러스</h2>
@@ -247,9 +251,9 @@
                         </div>
                     </div>
                     <div class="vehicle4">
-                        <a href="#" class="ev3">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/ev3_s_ag3.png" alt="" ></p>
-                            <p class="photo1"><img src="./sub_img/ev3_Q_ag3.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/ev3_q_ag3.png" alt="" ></p>
                             <h2>EV3</h2>
                             <p class="price">4,208 만원 ~</p>
                         </a>
@@ -259,7 +263,7 @@
                         </div>
                     </div>
                     <div class="vehicle5">
-                        <a href="#" class="ev6">
+                        <a href="./ev6.html">
                             <p class="photo"><img src="./sub_img/ev6_s_glb.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/ev6_q_glb.png" alt="" ></p>
                             <h2>EV6</h2>
@@ -271,7 +275,7 @@
                         </div>
                     </div>
                     <div class="vehicle6">
-                        <a href="#" class="ev6_gt">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/ev6-gt_s_klm.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/ev6-gt_q_klm.png" alt="" ></p>
                             <h2>EV6 GT</h2>
@@ -283,7 +287,7 @@
                         </div>
                     </div>
                     <div class="vehicle7">
-                        <a href="#" class="ev9">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/ev9_s_ism.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/ev9_q_ism.png" alt="" ></p>
                             <h2>EV9</h2>
@@ -295,7 +299,7 @@
                         </div>
                     </div>
                     <div class="vehicle8">
-                        <a href="#" class="bongo">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/bongo3-ev_s_ud.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/bongo3-ev_q_ud.png" alt="" ></p>
                             <h2>봉고III EV</h2>
@@ -307,7 +311,7 @@
                         </div>
                     </div>
                     <div class="vehicle9">
-                        <a href="#" class="bongo2">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/bongo3-ev-frozen-s_s_ud.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/bongo3-ev-frozen-s_q_ud.png" alt="" ></p>
                             <h2>봉고III EV 탑차/윙바디</h2>
@@ -319,7 +323,7 @@
                         </div>
                     </div>
                     <div class="vehicle10">
-                        <a href="#" class="bongo3">
+                        <a href="#">
                             <p class="photo"><img src="./sub_img/bongo3-ev-power_s_ud.png" alt="" ></p>
                             <p class="photo1"><img src="./sub_img/bongo3-ev-power_q_ud.png" alt="" ></p>
                             <h2>봉고III EV 파워게이트</h2>
@@ -332,6 +336,280 @@
                     </div>
                 </div>
             </div>
+            <div class="conatiner_car sedan">
+                <div class="vehicle_type">
+                    <div class="vehicle1">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/morning_s_a2g.png" alt=""></p>
+                            <p class="photo1"><img src="./sub_img/morning_q_a2g.png" alt=""></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">9년 연속 경형승용 1위</p>
+                            <h2>모닝</h2>
+                            <p class="price">1,325 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#" >자세히 보기</a>
+                            <a href="#" >견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle2">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/ray_s_m9y.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/ray_q_m9y.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">9년 연속 경형승용 1위</p>
+                            <h2>레이</h2>
+                            <p class="price">1,330 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle3">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/k3_s_m4b.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/k3_q_m4b.png" alt="" ></s>
+                            <h2>k3</h2>
+                            <p class="price">1,825 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle4">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/k3-gt_s_cr5.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/k3-gt_q_cr5.png" alt="" ></p>
+                            <h2>k3 GT</h2>
+                            <p class="price">2,784 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle5">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/k5_s_c7s.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/k5_q_c7s.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">4년 연속 중형승용 1위</spab>
+                            <h2>k5</h2>
+                            <p class="price">2,784 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle6">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/k8_s_klg.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/k8_q_klg.png" alt="" ></p>
+                            <h2>k8</h2>
+                            <p class="price">3,358 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle7">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/k9_s_d9b.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/k9_q_d9b.png" alt="" ></p>
+                            <h2>k9</h2>
+                            <p class="price">5,933 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="conatiner_car rv">
+                <div class="vehicle_type">
+                    <div class="vehicle1">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/seltos_s_swp.png" alt=""></p>
+                            <p class="photo1"><img src="./sub_img/seltos_q_swp.png" alt=""></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">컴팩트RV 1위</p>
+                            <h2>셀토스</h2>
+                            <p class="price">2,087 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#" >자세히 보기</a>
+                            <a href="#" >견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle2">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/niro-hybrid_s_cge.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/niro-hybrid_q_cge.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">컴팩트RV 1위</p>
+                            <h2>니로</h2>
+                            <p class="price">2,856 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle3">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/sportage_s_swp.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/sportage_q_swp.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">컴팩트RV 1위</p>
+                            <h2>스포티지</h2>
+                            <p class="price">2,537 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle4">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/sorento_s_bn4.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/sorento_q_bn4.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">대형RV 1위</p>
+                            <h2>쏘렌토</h2>
+                            <p class="price">3,506 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle5">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/mohave_s_abp.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/mohave_q_abp.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">대형RV 1위</p>
+                            <h2>모하비</h2>
+                            <p class="price">5,054 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle6">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/carnival_s_isg.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/carnival_q_isg.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">대형RV 1위</p>
+                            <h2>카니발</h2>
+                            <p class="price">3,470 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle7">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/carnival-hi-limousine_s_abp.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/carnival-hi-limousine_q_abp.png" alt="" ></p>
+                            <p class="inner_text"><img src="./sub_img/plp_awards_nsci.png" alt="">대형RV 1위</p>
+                            <h2>카니발 하이리무진</h2>
+                            <p class="price">6,250 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="conatiner_car bus">
+                <div class="vehicle_type">
+                    <div class="vehicle1">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/k8-taxi_s_klg.png" alt=""></p>
+                            <p class="photo1"><img src="./sub_img/k8-taxi_q_klg.png" alt=""></p>                            
+                            <h2>k8 택시</h2>
+                            <p class="price">2,810 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#" >자세히 보기</a>
+                            <a href="#" >견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle2">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/bongo3_s_ud.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/bongo3_q_ud.png" alt="" ></p>                            
+                            <h2>봉고III 트럭</h2>
+                            <p class="price">1,983 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle3">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/bongo3-frozen-standard-king_s_ud.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/bongo3-frozen-standard-king_q_ud.png" alt="" ></p>                            
+                            <h2>봉고III 탑차/윙바디/워크스루밴</h2>
+                            <p class="price">2,752 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle4">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/bongo3-dump-1_s_ma.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/bongo3-dump-1_q_ma.png" alt="" ></p>                            
+                            <h2>봉고III 덤프</h2>
+                            <p class="price">2,772 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle5">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/bongo3-powergate_s_ud.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/bongo3-powergate_q_ud.png" alt="" ></p>                            
+                            <h2>봉고III 파워게이트</h2>
+                            <p class="price">2,598 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle6">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/bongo3-homelorry-4wd_s_ud.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/bongo3-homelorry-4wd_q_ud.png" alt="" ></p>                            
+                            <h2>봉고III 홈로리/활어수송차</h2>
+                            <p class="price">3,966 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>
+                    <div class="vehicle7">
+                        <a href="#">
+                            <p class="photo"><img src="./sub_img/granbird_s.png" alt="" ></p>
+                            <p class="photo1"><img src="./sub_img/granbird_q.png" alt="" ></p>                            
+                            <h2>그랜버드</h2>
+                            <p class="price">18,140 만원 ~</p>
+                        </a>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">견적 내기</a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
         </div>
         <div class="fixed">
             <ul>
@@ -341,6 +619,11 @@
                 <li><a href="#">사양 설명서</a></li>
                 <li><a href="#">카탈로그/가격표</a></li>
             </ul>
+        </div>
+        <div class="top_btn">
+            <button type="button" class="top_btn_right" onclick="location.href='./vehicle.html'">
+                <span>상단 바로가기</span>
+            </button>
         </div>
     </main>
     <footer>
@@ -377,6 +660,8 @@
         <div class="footer_content">
             <div class="footer_left">
                 <p><a href="#">홈</a></p>
+                <p><a href="#">차량</a></p>
+                <p><a href="#">EV & PBV</a></p>
             </div>
             <div class="footer_right">
                 <p><a href="#">한국</a></p>
